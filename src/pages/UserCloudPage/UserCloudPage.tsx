@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Text from '../components/Text';
+import Text from '../../components/Text';
 
 const Wrapper = styled.div``;
 
