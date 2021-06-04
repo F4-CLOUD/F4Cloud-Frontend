@@ -1,19 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 import Text from '../../components/Text';
-import Header from '../../components/common/Header';
+import Header from '../../components/nav/Navbar';
+import Contact from '../../components/contact/contact';
 import ContactViewer from '../../components/contact/ContactViewer';
+import Navbar from '../../components/nav/Navbar';
+import Footer from 'components/footer/footer';
 
 const Wrapper = styled.div``;
 
-const AboutPage: React.FC = () => {
+const ContactPage: React.FC = () => {
   return (
     <Wrapper>
-      <Header />
-      <Text>Contact</Text>
-      <ContactViewer />
+      <Navbar />
+      <Contact />
+      <Footer />
     </Wrapper>
   );
 };
 
-export default AboutPage;
+export default ContactPage;

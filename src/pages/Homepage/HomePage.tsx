@@ -5,6 +5,7 @@ import Work from 'components/work/Work';
 import Welcome from 'components/welcome/Welcome';
 import Service from 'components/services/Services';
 import Learn from 'components/learn/LearnMore';
+import Footer from 'components/footer/footer';
 import Button from 'components/common/Button';
 // import { Link } from 'react-router-dom';
 // import Text from '../../components/Text';
@@ -26,6 +27,7 @@ const HomePage: React.FC = () => {
       <Work />
       <Service />
       <Learn />
+      <Footer />
     </Wrapper>
   );
 };
