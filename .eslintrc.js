@@ -30,6 +30,6 @@ module.exports = {
     '@typescript-eslint/ban-types': 'off',
     'react/prop-types': 'off',
     '@typescript-eslint/no-empty-interface': 'warn',
-    'prettier/prettier': ['error', { endOfLine: 'auto' }],
+    'prettier/prettier' : ['error',{'endOfLine': 'auto'}]
   },
 };
