@@ -15,7 +15,7 @@ const AuthFormWrapper = styled.div`
 
 // styled input
 const StyledInput = styled.input`
-  font-size: 1rem;
+  font-size: 1.5rem;
   border: none;
   border:bottom: 1px solid ${palette.gray[5]};
   padding-bottom: 0.5rem;
@@ -58,7 +58,6 @@ const AuthForm = ({ type }) => {
     <AuthFormWrapper>
       <h3>{text}</h3>
       <form>
-        <StyledInput></StyledInput>
         <StyledInput autoComplete="username" name="username" placeholder="아이디" />
         <StyledInput
           autoComplete="new-password"
