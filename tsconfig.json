@@ -19,13 +19,15 @@
       "isolatedModules": true,
       "noEmit": true,
       "jsx": "react-jsx",
-      "baseUrl": "src"
+      "baseUrl": "src",
+      "noImplicitAny": false,
+      "allowUnreachableCode": true,
     },
     "exclude": [
       "node_modules"
     ],
     "include": [
       "**/*.ts",
-      "**/*.tsx",
+      "**/*.tsx", "src/components/auth/AuthForm.js", "src/components/common/Button.js", "src/styles/GlobalStyle.js",
     ]
 }
