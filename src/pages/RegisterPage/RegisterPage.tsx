@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Text from '../../components/Text';
 import AuthForm from '../../components/auth/AuthForm';
 import AuthTemplate from '../../components/auth/AuthTemplate';
+import RegisterForm from '../../container/auth/RegisterForm';
 import Navbar from '../../components/nav/Navbar';
 import Footer from 'components/footer/footer';
 
@@ -13,7 +13,7 @@ const RegisterPage: React.FC = () => {
     <Wrapper>
       <Navbar />
       <AuthTemplate>
-        <AuthForm type="register" />
+        <RegisterForm />
       </AuthTemplate>
       <Footer />
     </Wrapper>

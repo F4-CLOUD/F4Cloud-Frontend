@@ -111,14 +111,14 @@ export const ContactCard = styled.div`
   box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.19);
   border-radius: 20px;
   transition: all 0.5s ease;
-  margin-top: 5rem;
+  margin-top: 1rem;
   &:not(:last-child) {
     margin-right: 5rem;
     @media only screen and (min-width: 1300px) {
       margin-right: 3rem;
     }
     @media only screen and (min-width: 1500px) {
-      margin-right: 20rem;
+      margin-right: 5rem;
     }
     @media only screen and (max-width: 900px) {
       margin-bottom: 10rem;

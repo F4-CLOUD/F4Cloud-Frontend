@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import F4cloud from '../../images/f4cloud.jpg';
 
 export const WelcomeContainer = styled.section`
   display: flex;

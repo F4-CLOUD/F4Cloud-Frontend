@@ -19,6 +19,7 @@ const StyledInput = styled.input`
   border: none;
   border:bottom: 1px solid ${palette.gray[5]};
   padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
   outline: none;
   width: 100%
   &:focus {
@@ -52,27 +53,49 @@ const textMap = {
   register: '회원가입',
 };
 
-const AuthForm = ({ type }) => {
+const AuthForm = ({ type, form, onChange, onSubmit }) => {
   const text = textMap[type];
   return (
     <AuthFormWrapper>
       <h3>{text}</h3>
-      <form>
-        <StyledInput autoComplete="username" name="username" placeholder="아이디" />
+      <form onSubmit={onSubmit}>
         <StyledInput
-          autoComplete="new-password"
-          name="password"
+          autoComplete="user_id"
+          name="user_id"
+          placeholder="아이디"
+          type="user_id"
+          onChange={onChange}
+          value={form.user_id}
+        />
+        <StyledInput
+          autoComplete="user_password"
+          name="user_password"
           placeholder="비밀번호"
           type="password"
+          onChange={onChange}
+          value={form.user_password}
         />
         {type === 'register' && (
-          <StyledInput
-            autoComplete="new-password"
-            name="passwordConfirm"
-            placeholder="비밀번호 확인"
-            type="password"
-          />
+          <div>
+            <StyledInput
+              autoComplete="confirm_user_password"
+              name="confirm_user_password"
+              placeholder="비밀번호 확인"
+              type="confirm_user_password"
+              onChange={onChange}
+              value={form.confirm_user_password}
+            />
+            <StyledInput
+              autoComplete="user_email"
+              name="user_email"
+              placeholder="이메일"
+              type="user_email"
+              onChange={onChange}
+              value={form.user_email}
+            />
+          </div>
         )}
+
         <ButtonWithMarginTOP cyan fullWidth>
           {text}
         </ButtonWithMarginTOP>

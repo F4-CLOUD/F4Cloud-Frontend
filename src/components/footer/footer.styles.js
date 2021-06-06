@@ -140,6 +140,16 @@ export const FooterLink = styled(Link)`
   }
 `;
 
+export const FooterOutLink = styled.a`
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 1rem;
+  transition: all 0.4s ease;
+  &:hover {
+    color: #e38b06;
+  }
+`;
+
 export const FooterCopyRight = styled(Link)`
   text-decoration: none;
   outline: none;
