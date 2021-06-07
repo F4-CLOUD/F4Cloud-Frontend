@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeField, initializeForm, register } from '../../modules/auth';
-import AuthForm from '../../components/auth/AuthForm';
+import AuthFormJ from '../../components/auth/AuthForm';
 import { check } from '../../modules/user';
 
 const RegisterForm = () => {
@@ -60,7 +60,7 @@ const RegisterForm = () => {
     }
   }, [user]);
 
-  return <AuthForm type="register" form={form} onChange={onChange} onSubmit={onSubmit} />;
+  return <AuthFormJ type="register" form={form} onChange={onChange} onSubmit={onSubmit} />;
 };
 
 export default RegisterForm;
