@@ -81,7 +81,7 @@ const AuthForm = ({ type, form, onChange, onSubmit }) => {
               autoComplete="confirm_user_password"
               name="confirm_user_password"
               placeholder="비밀번호 확인"
-              type="confirm_user_password"
+              type="password"
               onChange={onChange}
               value={form.confirm_user_password}
             />
