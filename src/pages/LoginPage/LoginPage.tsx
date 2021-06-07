@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Text from '../../components/Text';
-import AuthTemplate from '../../components/auth/AuthTemplate';
 import Navbar from '../../components/nav/Navbar';
+import AuthTemplate from '../../components/auth/AuthTemplate';
 import AuthForm from '../../components/auth/AuthForm';
-import Header from '../../components/common/Header';
+import LoginForm from '../../container/auth/LoginForm';
 import Footer from 'components/footer/footer';
 
 const Wrapper = styled.div``;
@@ -14,7 +13,8 @@ const LoginPage: React.FC = () => {
     <Wrapper>
       <Navbar />
       <AuthTemplate>
-        <AuthForm type="login" />
+        {/* <AuthForm type="login" /> */}
+        <LoginForm />
       </AuthTemplate>
       <Footer />
     </Wrapper>

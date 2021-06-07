@@ -12,6 +12,7 @@ import {
   FooterLinks,
   FooterLinkTitle,
   FooterLink,
+  FooterOutLink,
   FooterCopyRight,
   FooterLabel,
 } from './footer.styles';
@@ -52,7 +53,9 @@ function Footer() {
               </FooterLinks>
               <FooterLinks>
                 <FooterLinkTitle>Contact</FooterLinkTitle>
-                <FooterLink to="/">Github</FooterLink>
+                <FooterOutLink>
+                  <a href="https://github.com/F4-CLOUD">Github</a>
+                </FooterOutLink>
               </FooterLinks>
             </FooterLinksWrapper>
           </FooterLinkContainer>

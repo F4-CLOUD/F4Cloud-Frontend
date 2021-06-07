@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { IconContext } from 'react-icons';
-import { BiMenu, BiX, BsCloudDownload } from 'react-icons/bi';
+import { BiMenu, BiX } from 'react-icons/bi';
 import { Button } from '../../styles/GlobalStyle';
 import {
   Nav,

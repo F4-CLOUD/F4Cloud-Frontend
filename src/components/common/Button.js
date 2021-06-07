@@ -1,7 +1,5 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { withRouter } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import palette from '../../styles/palette';
 
 const StyledButton = styled.button`

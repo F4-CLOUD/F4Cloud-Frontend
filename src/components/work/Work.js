@@ -8,7 +8,6 @@ import {
   WorksIcon1,
   WorksIcon2,
   WorksIcon3,
-  WorksIcon4,
   WorksCardTitle,
   WorksCardText,
 } from './Work.styles';
