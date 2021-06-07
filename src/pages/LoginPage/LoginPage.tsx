@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Navbar from '../../components/nav/Navbar';
 import AuthTemplate from '../../components/auth/AuthTemplate';
-import AuthForm from '../../components/auth/AuthForm';
+import AuthForm from '../../components/auth/AuthFormJ';
 import LoginForm from '../../container/auth/LoginForm';
 import Footer from 'components/footer/footer';
 

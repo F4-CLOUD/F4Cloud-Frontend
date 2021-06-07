@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import AuthForm from '../../components/auth/AuthForm';
+import AuthForm from '../../components/auth/AuthFormJ';
 import AuthTemplate from '../../components/auth/AuthTemplate';
 import RegisterForm from '../../container/auth/RegisterForm';
 import Navbar from '../../components/nav/Navbar';
