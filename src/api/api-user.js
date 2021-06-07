@@ -13,4 +13,9 @@ export const userApi = {
       user_id,
       user_password,
     }),
+  verification: ({ user_id, code }) =>
+    api.post('/users/confirm_sign_up/', {
+      user_id,
+      code,
+    }),
 };
