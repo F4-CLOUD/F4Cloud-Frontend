@@ -3,37 +3,50 @@ import { HiUsers } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import { Container } from '../../styles/GlobalStyle';
 
-export const UserWrapper = styled.section`
+export const UserAside = styled.section`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 6rem 0;
+  position: sticky;
+  flex-direction: width;
+  justify-content: flex;
+  align-items: felx-start;
+  margin: 0;
 `;
 
-export const UserAside = styled.aside`
+export const UserWrapper = styled.section`
   display: flex;
+  column: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 6rem 0;
+  margin: 10rem 0;
 `;
 
 export const UserContainer = styled(Container)`
   display: flex;
-  flex-direction: column;
+  flex-direction: width;
   ${Container};
 `;
 
-export const UserTitle = styled.h2`
-  font-size: clamp(2rem, 8vw, 5rem);
+export const UserTitle = styled.h3`
+  font-size: clamp(2rem, 8vw, 4rem);
   text-align: center;
-  margin-bottom: 1rem;
+  margin: 3rem;
   font-weight: bold;
   @media only screen and (max-width: 700px) {
     margin-bottom: 0;
   }
 `;
+
+export const UserSubTitle = styled.h4`
+  font-size: clamp(2rem, 8vw, 4rem);
+  text-align: center;
+  margin: 3rem;
+  font-weight: bold;
+  @media only screen and (max-width: 700px) {
+    margin-bottom: 0;
+  }
+`;
+
 export const UserSearchForm = styled.form`
   display: flex;
   justify-content: center;

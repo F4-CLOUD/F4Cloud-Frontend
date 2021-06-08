@@ -12,3 +12,6 @@ export const register = ({ user_id, user_password, confirm_user_password, user_e
 
 //로그인 상태 확인
 // export const check = () => client.get('api/auth/check');
+
+//로그아웃
+export const logout = () => client.get('users/sign_out');
