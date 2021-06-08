@@ -17,11 +17,6 @@ export const Nav = styled.nav`
   align-items: center;
 `;
 
-export const UserInfo = styled.div`
-  font-weight: 800;
-  margin-right: 1rem;
-`;
-
 export const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;

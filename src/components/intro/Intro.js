@@ -1,5 +1,4 @@
 import Navbar from '../nav/Navbar';
-import HeaderContainer from '../../container/auth/HeaderContainer';
 import { Button } from '../../styles/GlobalStyle';
 import {
   IntroContainer,
@@ -16,7 +15,7 @@ const Intro = () => {
   return (
     <div>
       <IntroContainer>
-        <HeaderContainer />
+        <Navbar />
         <IntroContent>
           <IntroContentText>
             <IntroTitle>

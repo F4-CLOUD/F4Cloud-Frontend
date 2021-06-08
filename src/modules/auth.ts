@@ -60,7 +60,6 @@ const initialState = {
     user_password: '',
   },
   auth: null,
-  user: null,
   authError: null,
 };
 
@@ -91,13 +90,11 @@ const auth = handleActions(
       ...state,
       authError: null,
       auth,
-      user: auth,
     }),
     //로그인 실패
     [LOGIN_FAILURE]: (state, { payload: error }) => ({
       ...state,
       authError: error,
-      user: null,
     }),
   },
   initialState,

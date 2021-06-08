@@ -149,7 +149,7 @@ export const ContactImgContainer = styled.div`
   width: 9rem;
   height: 9rem;
   border-radius: 20%;
-  border: 0px solid #333;
+  border: 2px solid #333;
   transition: all 0.3s ease-out;
   margin-top: 2rem;
   display: flex;

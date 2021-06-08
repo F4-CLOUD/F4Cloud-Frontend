@@ -1,97 +1,77 @@
-import auth from 'modules/auth';
-import React, { useState, useEffect } from 'react';
-import { IconContext } from 'react-icons';
-import { BiMenu, BiX } from 'react-icons/bi';
-import { useSelector } from 'react-redux';
-import { Button } from '../../styles/GlobalStyle';
-import {
-  Nav,
-  UserInfo,
-  NavbarContainer,
-  NavLogo,
-  NavIcon,
-  MenuIcon,
-  Menu,
-  MenuItem,
-  MenuLink,
-  MenuItemBtn,
-  MenuLinkBtn,
-} from './Header.styles';
+import React from 'react';
+import styled from 'styled-components';
+import Responsive from './Responsive';
+import Button from './Button';
+import { Link } from 'react-router-dom';
+
+const UserInfo = styled.div`
+  font-weight: 800;
+  margin-rigth: 1rem;
+`;
+
+const HeaderWrapper = styled.div`
+  position: fixed;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+`;
+
+// Responsive 컴포넌트의 속성에 스타일을 추가해서 새로운 컴포넌트 생성
+
+const Wrapper = styled(Responsive)`
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    font-size: 1.125rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+  .nav {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+  }
+`;
+
+// Header가 fixed로 되어 있으므로 페이지 콘텐트 4rem 아래에 나타나도록 해주는 컴포넌트
+const Spacer = styled.div`
+  height: 0.5rem;
+`;
 
 const Header = () => {
-  const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
-  const handleClick = () => setClick(!click);
-  const closeMenu = () => setClick(false);
-
-  const showButton = () => {
-    if (window.innerWidth <= 1000) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  useEffect(() => {
-    showButton();
-  }, []);
-  window.addEventListener('resize', showButton);
-
   return (
-    <div>
-      <IconContext.Provider value={{ color: '#fff' }}>
-        <Nav>
-          <NavbarContainer>
-            <NavLogo to="/">
-              <NavIcon />
-              F4CLOUD
-            </NavLogo>
-            <MenuIcon onClick={handleClick}>{click ? <BiX /> : <BiMenu />}</MenuIcon>
-            <Menu onClick={handleClick} click={click}>
-              <MenuItem>
-                <MenuLink onClick={closeMenu} to="/">
-                  Home
-                </MenuLink>
-              </MenuItem>
-              <MenuItem>
-                <MenuLink onClick={closeMenu} to="/about">
-                  About
-                </MenuLink>
-              </MenuItem>
-              <MenuItem>
-                <MenuLink onClick={closeMenu} to="/service">
-                  Services
-                </MenuLink>
-              </MenuItem>
-              <MenuItem>
-                <MenuLink onClick={closeMenu} to="/contact">
-                  Contact
-                </MenuLink>
-              </MenuItem>
-              <MenuItemBtn>
-                <MenuLinkBtn to="/">
-                  <UserInfo>test</UserInfo>
-                  <Button primary>Logout</Button>
-                </MenuLinkBtn>
-              </MenuItemBtn>
-              {/* <MenuItemBtn>
-                {button ? (
-                  <MenuLinkBtn to="/register">
-                    <Button primary>Register</Button>
-                  </MenuLinkBtn>
-                ) : (
-                  <MenuLinkBtn to="/register">
-                    <Button primary bigFont onClick={closeMenu}>
-                      Register
-                    </Button>
-                  </MenuLinkBtn>
-                )}
-              </MenuItemBtn> */}
-            </Menu>
-          </NavbarContainer>
-        </Nav>
-      </IconContext.Provider>
-    </div>
+    <>
+      <HeaderWrapper>
+        <Wrapper>
+          <Link to="/" className="logo">
+            F4CLOUD
+          </Link>
+          <Link to="/" className="nav">
+            Home
+          </Link>
+          <Link to="/about" className="nav">
+            About
+          </Link>
+          <Link to="/service" className="nav">
+            Service
+          </Link>
+          <Link to="/contact" className="nav">
+            Contact
+          </Link>
+          <div className="right">
+            <Button to="/login">Login</Button>
+            <Button to="/register">Register</Button>
+          </div>
+        </Wrapper>
+        <Spacer />
+      </HeaderWrapper>
+    </>
   );
 };
 

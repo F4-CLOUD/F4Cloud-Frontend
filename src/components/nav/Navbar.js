@@ -1,12 +1,9 @@
-import auth from 'modules/auth';
 import React, { useState, useEffect } from 'react';
 import { IconContext } from 'react-icons';
 import { BiMenu, BiX } from 'react-icons/bi';
-import { useSelector } from 'react-redux';
 import { Button } from '../../styles/GlobalStyle';
 import {
   Nav,
-  UserInfo,
   NavbarContainer,
   NavLogo,
   NavIcon,
@@ -17,8 +14,7 @@ import {
   MenuItemBtn,
   MenuLinkBtn,
 } from './Navbar.styles';
-
-const Navbar = ({ user }) => {
+const Navbar = () => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
   const handleClick = () => setClick(!click);
@@ -70,17 +66,7 @@ const Navbar = ({ user }) => {
                 </MenuLink>
               </MenuItem>
               <MenuItemBtn>
-                {user ? (
-                  <MenuLinkBtn to="/Login">
-                    <UserInfo>test</UserInfo>
-                    <Button primary>Logout</Button>
-                  </MenuLinkBtn>
-                ) : (
-                  <MenuLinkBtn to="/Login">
-                    <Button primary>Login </Button>
-                  </MenuLinkBtn>
-                )}
-                {/* {button ? (
+                {button ? (
                   <MenuLinkBtn to="/Login">
                     <Button primary>Login</Button>
                   </MenuLinkBtn>
@@ -90,18 +76,9 @@ const Navbar = ({ user }) => {
                       Login
                     </Button>
                   </MenuLinkBtn>
-                )} */}
+                )}
               </MenuItemBtn>
-              {user ? (
-                <MenuLinkBtn to="/">
-                  <Button primary>환영합니다</Button>
-                </MenuLinkBtn>
-              ) : (
-                <MenuLinkBtn to="/register">
-                  <Button primary>Register</Button>
-                </MenuLinkBtn>
-              )}
-              {/* <MenuItemBtn>
+              <MenuItemBtn>
                 {button ? (
                   <MenuLinkBtn to="/register">
                     <Button primary>Register</Button>
@@ -113,7 +90,7 @@ const Navbar = ({ user }) => {
                     </Button>
                   </MenuLinkBtn>
                 )}
-              </MenuItemBtn> */}
+              </MenuItemBtn>
             </Menu>
           </NavbarContainer>
         </Nav>

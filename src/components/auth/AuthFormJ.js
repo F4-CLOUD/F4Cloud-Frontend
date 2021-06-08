@@ -5,13 +5,6 @@ import palette from '../../styles/palette';
 import Button from '../common/Button';
 // 회원가입, 로그인 폼 보여주는 컴포넌트입니다.
 
-const ErrorMessage = styled.div`
-  color: red;
-  text-align: center;
-  font-size: 0.875rem;
-  margin-top: 1rem;
-`;
-
 const AuthFormWrapper = styled.div`
   h3 {
     margin: 0;
@@ -60,7 +53,7 @@ const textMap = {
   register: '회원가입',
 };
 
-const AuthForm = ({ type, form, onChange, onSubmit, error }) => {
+const AuthForm = ({ type, form, onChange, onSubmit }) => {
   const text = textMap[type];
   return (
     <AuthFormWrapper>
@@ -102,8 +95,7 @@ const AuthForm = ({ type, form, onChange, onSubmit, error }) => {
             />
           </div>
         )}
-        {error && <ErrorMessage>{error}</ErrorMessage>}
-        {/* <ErrorMessage>에러발생!</ErrorMessage> */}
+
         <ButtonWithMarginTOP cyan fullWidth>
           {text}
         </ButtonWithMarginTOP>
