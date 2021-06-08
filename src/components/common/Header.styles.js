@@ -18,6 +18,7 @@ export const Nav = styled.nav`
 `;
 
 export const UserInfo = styled.div`
+  color: fff;
   font-weight: 800;
   margin-right: 1rem;
 `;
