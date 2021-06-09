@@ -10,6 +10,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer, { rootSaga } from './modules/index';
 import createSagaMiddleware from 'redux-saga';
+import 'bootstrap/dist/css/bootstrap.css';
 // import { tempSetUser, check } from './modules/user';
 
 const sagaMiddleware = createSagaMiddleware();

@@ -32,6 +32,7 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 0 50px;
   max-width: 1300px;
+  flex-direction: width;
   width: 100%;
   @media (max-width: 400px) {
     padding: 0 10px;

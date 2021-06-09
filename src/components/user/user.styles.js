@@ -21,15 +21,32 @@ export const UserWrapper = styled.section`
   margin: 10rem 0;
 `;
 
-export const UserContainer = styled(Container)`
+export const DropdownWrapper = styled.section`
+  display: flex;
+  column: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem;
+`;
+export const UserCardContainer = styled(Container)`
   display: flex;
   flex-direction: width;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
   ${Container};
 `;
 
-export const UserTitle = styled.h3`
-  font-size: clamp(2rem, 8vw, 4rem);
-  text-align: center;
+export const UserContainer = styled(Container)`
+  display: flex;
+  flex-direction: column;
+  ${Container};
+`;
+
+export const UserTitle = styled.h4`
+  font-size: clamp(2rem, 8vw, 2rem);
+  text-align: left;
   margin: 3rem;
   font-weight: bold;
   @media only screen and (max-width: 700px) {
@@ -38,8 +55,8 @@ export const UserTitle = styled.h3`
 `;
 
 export const UserSubTitle = styled.h4`
-  font-size: clamp(2rem, 8vw, 4rem);
-  text-align: center;
+  font-size: clamp(2rem, 8vw, 2rem);
+  text-align: left;
   margin: 3rem;
   font-weight: bold;
   @media only screen and (max-width: 700px) {
@@ -52,6 +69,7 @@ export const UserSearchForm = styled.form`
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
+  margin-left: 3rem;
   margin-bottom: 1rem;
   @media only screen and (max-width: 900px) {
     flex-direction: column;

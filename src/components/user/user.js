@@ -1,77 +1,64 @@
 import styled from 'styled-components';
-import {
-  ProSidebar,
-  SidebarHeader,
-  SidebarFooter,
-  SidebarContent,
-  Menu,
-  MenuItem,
-  SubMenu,
-} from 'react-pro-sidebar';
-import { OutlineButton } from '../../styles/GlobalStyle';
 import AsideNavbar from '../../components/asidenav/AsideNavbar';
-import DropdownMenu from '../../components/dropdownMenu/DropdownMenu';
 import React, { handleClick } from 'react';
-import useDropdownMenu from 'react-accessible-dropdown-menu-hook';
 import 'react-pro-sidebar/dist/css/styles.css';
-import TitleImg from '../../images/title-search.jpeg';
-import HashtagImg from '../../images/hashtag-search.jpeg';
-import HumanImg from '../../images/human-search.jpeg';
-import CloudImg from '../../images/cloud-computing.jpeg';
-import GroupImg from '../../images/group.jpeg';
+import { Dropdown, DropdownButton, SplitButton, ButtonGroup, ListGroup } from 'react-bootstrap';
+import Card from '../../components/card/Card';
 import {
   UserContainer,
   UserWrapper,
+  DropdownWrapper,
   UserAside,
   UserSearchForm,
   UserTitle,
   UserSearchInput,
   UserSearchBtn,
   UserSubTitle,
-  UserContentContainer,
-  UserTabContainer,
-  UserBtn,
-  UserCardWrapper,
-  UserFeature,
-  UserFeatureContent,
-  UserFeatureTitle,
-  UserFeatureText,
-  UserFeatureDetails,
-  UserFeatureItem,
-  UserItemTitle,
-  UserItemContent,
-  UserItemIcon,
-  UserItemText,
-  UserCardSection,
-  UserSmallCards,
-  UserCard,
-  UserCardContent,
-  UserCardHeading,
-  UserCardDetails,
-  UserCardItems,
-  UserCardTitle,
-  UserCardItem,
-  UserCardIcon,
-  UserCardText,
-  UserImg,
-  Img,
+  UserCardContainer,
 } from './user.styles';
+function alertClicked() {
+  alert('You clicked the third ListGroupItem');
+}
 
-const Wrapper = styled.div`
-  display: flex;
-  position: sticky;
-  flex-direction: column;
-  column: 100%;
-`;
+const Wrapper = styled.div``;
 const Users = () => (
   <Wrapper>
     <UserAside>
       <UserWrapper>
+        <DropdownWrapper>
+          <div className="mb-2">
+            {[DropdownButton].map((DropdownType, variant) => (
+              <DropdownType
+                as={ButtonGroup}
+                key={variant}
+                menuAlign={{ lg: 'left' }}
+                id={`dropdown-variants-${variant}`}
+                variant="secondary"
+                size="lg"
+                title="새로 만들기"
+              >
+                <Dropdown.Item eventKey="1">폴더 생성</Dropdown.Item>
+                <Dropdown.Item eventKey="2">파일 업로드</Dropdown.Item>
+                {/* <Dropdown.Divider />
+                <Dropdown.Item eventKey="4">대시</Dropdown.Item> */}
+              </DropdownType>
+            ))}
+          </div>
+        </DropdownWrapper>
         <AsideNavbar />
       </UserWrapper>
       <UserWrapper>
         <UserContainer>
           <UserTitle>내 드라이브</UserTitle>
+          <UserCardContainer>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+          </UserCardContainer>
+        </UserContainer>
+        <UserContainer>
+          <UserSubTitle>클라우드 자료</UserSubTitle>
           <UserSearchForm>
             <UserSearchInput
               name="search"
@@ -82,11 +69,40 @@ const Users = () => (
             <UserSearchBtn>Submit</UserSearchBtn>
           </UserSearchForm>
         </UserContainer>
-        <UserWrapper>
-          <UserContainer>
-            <UserSubTitle>클라우드 자료</UserSubTitle>
-          </UserContainer>
-        </UserWrapper>
+        <UserContainer>
+          <ListGroup defaultActiveKey="#link1">
+            <ListGroup.Item action href="#link1">
+              파일명
+            </ListGroup.Item>
+            <ListGroup.Item action href="#link2">
+              파일명
+            </ListGroup.Item>
+            <ListGroup.Item action href="#link2">
+              파일명
+            </ListGroup.Item>
+            <ListGroup.Item action href="#link2">
+              파일명
+            </ListGroup.Item>
+            <ListGroup.Item action href="#link2">
+              파일명
+            </ListGroup.Item>
+            <ListGroup.Item action href="#link2">
+              파일명
+            </ListGroup.Item>
+            <ListGroup.Item action onClick={alertClicked}>
+              버튼 형식으로 클릭하면 action
+            </ListGroup.Item>
+            <ListGroup.Item action onClick={alertClicked}>
+              버튼 형식으로 클릭하면 action
+            </ListGroup.Item>
+            <ListGroup.Item action onClick={alertClicked}>
+              버튼 형식으로 클릭하면 action
+            </ListGroup.Item>
+            <ListGroup.Item action onClick={alertClicked}>
+              버튼 형식으로 클릭하면 action
+            </ListGroup.Item>
+          </ListGroup>
+        </UserContainer>
       </UserWrapper>
     </UserAside>
   </Wrapper>

@@ -41,29 +41,22 @@ const AsideNavbar = () => {
   return (
     <ProSidebar width="200px">
       <Menu iconShape="square">
-        <MenuItem icon={<GrOnedrive />}>
-          Dashboard
+        <SubMenu title="내 드라이브" icon={<GrOnedrive />}>
+          내 드라이브
           <Link to="/@test" />
-        </MenuItem>
-        <SubMenu title="폴더" icon={<AiFillFolder />}>
-          <MenuItem> 폴더1 </MenuItem>
-          <MenuItem> 폴더2 </MenuItem>
-          <MenuItem> 폴더3 </MenuItem>
-          <MenuItem> 폴더4 </MenuItem>
-          <MenuItem> 폴더5 </MenuItem>
+          <MenuItem icon={<IoMdPhotos />}>
+            사진
+            <Link to="/@test" />
+          </MenuItem>
+          <MenuItem icon={<FiVideo />}>
+            동영상
+            <Link to="/@test" />
+          </MenuItem>
+          <MenuItem icon={<IoDocument />}>
+            문서
+            <Link to="/@test" />
+          </MenuItem>
         </SubMenu>
-        <MenuItem icon={<IoMdPhotos />}>
-          사진
-          <Link to="/@test" />
-        </MenuItem>
-        <MenuItem icon={<FiVideo />}>
-          동영상
-          <Link to="/@test" />
-        </MenuItem>
-        <MenuItem icon={<IoDocument />}>
-          문서
-          <Link to="/@test" />
-        </MenuItem>
         <MenuItem icon={<FiTrash />}>
           휴지통
           <Link to="/@test" />
